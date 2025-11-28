@@ -17,6 +17,6 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
     @Query("SELECT c FROM Cliente c WHERE c.estado = true")
     java.util.List<Cliente> findActiveClientes();
 
-    @Query("SELECT c FROM Cliente c WHERE c.clienteId = :clienteId AND c.estado = true")
-    Optional<Cliente> findActiveClienteById(@Param("clienteId") Long clienteId);
+    @Query("SELECT c FROM Cliente c WHERE c.personaId = :personaId AND c.estado = true")
+    Optional<Cliente> findActiveClienteById(@Param("personaId") Long personaId);
 }

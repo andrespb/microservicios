@@ -8,7 +8,6 @@ import jakarta.validation.constraints.Positive;
 
 @Entity
 @Table(name = "PERSONAS")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Persona {
 
     @Id
