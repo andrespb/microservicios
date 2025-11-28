@@ -1,0 +1,11 @@
+com\banking\clientepersona\infrastructure\exception\GlobalExceptionHandler.class
+com\banking\clientepersona\infrastructure\exception\GlobalExceptionHandler$ErrorResponse.class
+com\banking\clientepersona\application\dto\ClienteRequestDTO.class
+com\banking\clientepersona\domain\service\ClienteService.class
+com\banking\clientepersona\infrastructure\repository\ClienteRepository.class
+com\banking\clientepersona\ClientePersonaServiceApplication.class
+com\banking\clientepersona\presentation\controller\ClienteController.class
+com\banking\clientepersona\application\dto\ClienteResponseDTO.class
+com\banking\clientepersona\domain\entity\Cliente.class
+com\banking\clientepersona\domain\entity\Persona.class
+com\banking\clientepersona\infrastructure\config\AppConfig.class

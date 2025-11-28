@@ -1,0 +1,17 @@
+com\banking\cuentamovimientos\infrastructure\config\AppConfig.class
+com\banking\cuentamovimientos\presentation\controller\MovimientoController.class
+com\banking\cuentamovimientos\application\dto\CuentaRequestDTO.class
+com\banking\cuentamovimientos\application\dto\EstadoCuentaDTO$CuentaReporteDTO.class
+com\banking\cuentamovimientos\infrastructure\messaging\EventPublisher.class
+com\banking\cuentamovimientos\infrastructure\repository\MovimientoRepository.class
+com\banking\cuentamovimientos\presentation\controller\ReporteController.class
+com\banking\cuentamovimientos\infrastructure\repository\CuentaRepository.class
+com\banking\cuentamovimientos\domain\entity\Cuenta.class
+com\banking\cuentamovimientos\application\dto\EstadoCuentaDTO$MovimientoReporteDTO.class
+com\banking\cuentamovimientos\application\dto\EstadoCuentaDTO.class
+com\banking\cuentamovimientos\application\dto\MovimientoRequestDTO.class
+com\banking\cuentamovimientos\domain\service\ReporteService.class
+com\banking\cuentamovimientos\infrastructure\messaging\RabbitConfig.class
+com\banking\cuentamovimientos\domain\service\MovimientoService.class
+com\banking\cuentamovimientos\CuentaMovimientosServiceApplication.class
+com\banking\cuentamovimientos\domain\entity\Movimiento.class

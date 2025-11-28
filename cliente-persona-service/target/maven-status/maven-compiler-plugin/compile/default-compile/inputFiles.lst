@@ -1,0 +1,10 @@
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\infrastructure\config\AppConfig.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\domain\entity\Persona.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\infrastructure\repository\ClienteRepository.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\domain\entity\Cliente.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\domain\service\ClienteService.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\ClientePersonaServiceApplication.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\application\dto\ClienteResponseDTO.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\application\dto\ClienteRequestDTO.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\presentation\controller\ClienteController.java
+D:\temp-projects\cliente-movimientos\cliente-persona-service\src\main\java\com\banking\clientepersona\infrastructure\exception\GlobalExceptionHandler.java
