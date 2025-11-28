@@ -1,0 +1,509 @@
+{
+    "info": {
+        "_postman_id": "banking-microservices-api",
+        "name": "Banking Microservices API",
+        "description": "Colección completa para probar los microservicios bancarios: Cliente-Persona y Cuenta-Movimientos",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "banking-api"
+    },
+    "item": [
+        {
+            "name": "Cliente-Persona Service",
+            "item": [
+                {
+                    "name": "Health Check",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cliente_persona_url}}/actuator/health",
+                            "host": [
+                                "{{cliente_persona_url}}"
+                            ],
+                            "path": [
+                                "actuator",
+                                "health"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Cliente",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"Juan Pérez García\",\n  \"genero\": \"M\",\n  \"edad\": 35,\n  \"identificacion\": \"1234567890\",\n  \"direccion\": \"Av. Principal 123, Ciudad\",\n  \"telefono\": \"+1-555-0123\",\n  \"contrasena\": \"segura123\",\n  \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{cliente_persona_url}}/api/clientes",
+                            "host": [
+                                "{{cliente_persona_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "clientes"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Todos los Clientes",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cliente_persona_url}}/api/clientes",
+                            "host": [
+                                "{{cliente_persona_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "clientes"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Cliente por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cliente_persona_url}}/api/clientes/{{cliente_id}}",
+                            "host": [
+                                "{{cliente_persona_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "clientes",
+                                "{{cliente_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Cliente",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"Juan Pérez García - Actualizado\",\n  \"genero\": \"M\",\n  \"edad\": 36,\n  \"identificacion\": \"1234567890\",\n  \"direccion\": \"Av. Principal 456, Ciudad Actualizada\",\n  \"telefono\": \"+1-555-0124\",\n  \"contrasena\": \"nuevaSegura123\",\n  \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{cliente_persona_url}}/api/clientes/{{cliente_id}}",
+                            "host": [
+                                "{{cliente_persona_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "clientes",
+                                "{{cliente_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Cliente",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cliente_persona_url}}/api/clientes/{{cliente_id}}",
+                            "host": [
+                                "{{cliente_persona_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "clientes",
+                                "{{cliente_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Cliente Maria",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"nombre\": \"María González López\",\n  \"genero\": \"F\",\n  \"edad\": 28,\n  \"identificacion\": \"9876543210\",\n  \"direccion\": \"Calle Secundaria 789, Barrio Norte\",\n  \"telefono\": \"+1-555-0456\",\n  \"contrasena\": \"maria2025\",\n  \"estado\": true\n}"
+                        },
+                        "url": {
+                            "raw": "{{cliente_persona_url}}/api/clientes",
+                            "host": [
+                                "{{cliente_persona_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "clientes"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Cuenta-Movimientos Service",
+            "item": [
+                {
+                    "name": "Health Check",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/actuator/health",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "actuator",
+                                "health"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Cuenta",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"numeroCuenta\": \"1001234567\",\n  \"tipoCuenta\": \"AHORROS\",\n  \"saldoInicial\": 1000.00,\n  \"estado\": true,\n  \"clienteId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/cuentas",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "cuentas"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Todas las Cuentas",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/cuentas",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "cuentas"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Cuenta por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/cuentas/{{cuenta_id}}",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "cuentas",
+                                "{{cuenta_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Cuenta",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"numeroCuenta\": \"1001234567\",\n  \"tipoCuenta\": \"CORRIENTE\",\n  \"saldo\": 1500.00,\n  \"estado\": true,\n  \"clienteId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/cuentas/{{cuenta_id}}",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "cuentas",
+                                "{{cuenta_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Cuenta",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/cuentas/{{cuenta_id}}",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "cuentas",
+                                "{{cuenta_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Movimiento - Depósito",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"tipoMovimiento\": \"DEPOSITO\",\n  \"valor\": 500.00,\n  \"cuentaId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/movimientos",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "movimientos"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Movimiento - Retiro",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"tipoMovimiento\": \"RETIRO\",\n  \"valor\": 200.00,\n  \"cuentaId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/movimientos",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "movimientos"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Todos los Movimientos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/movimientos",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "movimientos"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Movimiento por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/movimientos/{{movimiento_id}}",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "movimientos",
+                                "{{movimiento_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Movimientos por Cuenta",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/movimientos/cuenta/{{cuenta_id}}",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "movimientos",
+                                "cuenta",
+                                "{{cuenta_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Reportes",
+            "item": [
+                {
+                    "name": "Reporte de Estado de Cuenta",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{cuenta_movimientos_url}}/api/reportes/estado-cuenta?clienteId={{cliente_id}}&fechaInicio=2025-11-01&fechaFin=2025-11-30",
+                            "host": [
+                                "{{cuenta_movimientos_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "reportes",
+                                "estado-cuenta"
+                            ],
+                            "query": [
+                                {
+                                    "key": "clienteId",
+                                    "value": "{{cliente_id}}"
+                                },
+                                {
+                                    "key": "fechaInicio",
+                                    "value": "2025-11-01"
+                                },
+                                {
+                                    "key": "fechaFin",
+                                    "value": "2025-11-30"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "cliente_persona_url",
+            "value": "http://localhost:8080",
+            "type": "string"
+        },
+        {
+            "key": "cuenta_movimientos_url",
+            "value": "http://localhost:8081",
+            "type": "string"
+        },
+        {
+            "key": "cliente_id",
+            "value": "1",
+            "type": "string"
+        },
+        {
+            "key": "cuenta_id",
+            "value": "1",
+            "type": "string"
+        },
+        {
+            "key": "movimiento_id",
+            "value": "1",
+            "type": "string"
+        }
+    ]
+}
