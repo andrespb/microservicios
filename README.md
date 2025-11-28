@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Sistema bancario basado en microservicios que separa la gestión de clientes/personas y cuentas/movimientos, implementando comunicación asíncrona entre servicios usando RabbitMQ.
+Sistema basado en microservicios que separa la gestión de clientes/personas y cuentas/movimientos, implementando comunicación asíncrona entre servicios usando RabbitMQ.
 
 ## Arquitectura
 
